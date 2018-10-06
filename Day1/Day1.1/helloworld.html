@@ -1,0 +1,36 @@
+<html>
+<head>
+  <!-- react file development version -->
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <!-- DOM file development version -->
+   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+   <!-- Babel transpiler to convert JSX to JS -->
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+<body>
+  <div id="intuit"></div>
+  <script type="text/jsx">
+  // add type to script tag
+  //JSX
+  let h1= <h1> Hello React </h1>;
+  ReactDOM.render(h1, document.getElementById("intuit"));
+
+  let tb1 = <input type="text" placeholder="name"></input>; //ending tag for all opening tags
+  ReactDOM.render(tb1, document.getElementById("intuit"));
+
+
+let form1= (
+  <div>
+  <input type="text" placeholder="name"></input>
+  <br></br>
+  <input type="button" value="submit"></input>
+  </div>
+);
+ReactDOM.render(form1, document.getElementById("intuit"));
+
+//old way
+  //let h1= React.createElement("h1", null, "Hello world");
+  //ReactDOM.render(h1, document.getElementById("intuit"));
+  </script>
+</body>
+</html>
