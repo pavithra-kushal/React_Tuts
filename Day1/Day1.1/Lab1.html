@@ -1,0 +1,43 @@
+<html>
+<head>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+<body>
+  <div id="intuit"></div>
+  <script type="text/jsx">
+
+function login()
+{
+  let uname = document.getElementById("username").value
+  let pword = document.getElementById("password").value
+  if(uname == "admin" && pword == "admin")
+  {
+    let alert = <label style={{color: 'green'}}> Valid user name </label>;
+    ReactDOM.render(alert, document.getElementById("alert"));
+    document.getElementById("btn").disabled = true;
+  }
+  else {
+    {
+      let alert = <label style={{color: 'red'}}> Invalid user name or password</label>;
+      ReactDOM.render(alert, document.getElementById("alert"));
+    }
+  }
+}
+
+let form1= (
+  <div>
+  <input type="text" id="username" placeholder="user name"></input>
+  <br></br>
+  <input type="text" id="password" placeholder="password"></input>
+  <br></br>
+  <input type="button" id= "btn" value="Login" onClick={login}></input>
+  <p id="alert"></p>
+  </div>
+);
+ReactDOM.render(form1, document.getElementById("intuit"));
+
+  </script>
+</body>
+</html>
